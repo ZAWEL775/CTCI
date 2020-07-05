@@ -1,14 +1,17 @@
 package CTCI;
 
+import java.nio.charset.CharacterCodingException;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Stack;
 
 public class Arrays_String {
 
     public static void main(String[] args) {
-        URLify("Mr John Smith  ");
+
     }
 
-    static boolean isUnique(String s){
+    private static boolean isUnique(String s){
         String str = "abcdefghijklmnopqrstuvwxyz1234567890";
         int counter =0;
         for(int i =0; i< s.length(); i++){
@@ -23,7 +26,7 @@ public class Arrays_String {
         return false;
     }
 
-    static boolean checkPermutation(String s , String k){
+    private static boolean checkPermutation(String s , String k){
 
         char[] sarr = s.toCharArray();
         char[] karr = k.toCharArray();
@@ -34,15 +37,7 @@ public class Arrays_String {
         String newSarr = new String(sarr);
         String newKarr = new String(karr);
 
-        int counter =0;
-
-        for(int i=0; i< s.length(); i++){
-            if(newSarr.equals(newKarr)){
-                counter ++;
-            }
-        }
-
-        if(counter == s.length()){
+        if(newSarr.equals(newKarr)){
             System.out.println("Strings are permutation of another");
             return true;
         }
@@ -50,7 +45,7 @@ public class Arrays_String {
         return false;
     }
 
-    static String URLify(String s){
+    private static String URLify(String s){
         StringBuilder sb = new StringBuilder();
 
         for(int i =0; i< s.length() - 2; i++){
@@ -67,8 +62,11 @@ public class Arrays_String {
     }
 
     // Palindrome Permutation
-    // One Array
+    // One Array - Spell Checking Algorithm Does This
+
+
     // String Compression
+
     // Rotate Matrix
     // Zero Matrix
     // String Rotation
