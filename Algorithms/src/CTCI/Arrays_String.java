@@ -1,14 +1,12 @@
 package CTCI;
 
-import java.nio.charset.CharacterCodingException;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Stack;
+import java.util.*;
 
 public class Arrays_String {
 
     public static void main(String[] args) {
-
+    String s = "aaabcccccaaabb";
+    System.out.println(stringCompression(s));
     }
 
     private static boolean isUnique(String s){
@@ -66,6 +64,21 @@ public class Arrays_String {
 
 
     // String Compression
+
+    private static String stringCompression(String s){
+        StringBuilder sb = new StringBuilder();
+        int count = 0;
+
+        for(int i=0; i < s.length(); i++){
+            count ++;
+
+            if(i + 1 >= s.length() || s.charAt(i) != s.charAt(i + 1)){
+                sb.append(s.charAt(i));
+                sb.append(count);
+                count = 0;
+            }
+        } return sb.length() < s.length() ? sb.toString() : s;
+    }
 
     // Rotate Matrix
     // Zero Matrix

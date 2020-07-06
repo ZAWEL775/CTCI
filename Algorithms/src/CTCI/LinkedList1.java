@@ -1,10 +1,6 @@
 package CTCI;
 
-import sun.awt.image.ImageWatched;
-
-import java.util.HashSet;
-import java.util.Hashtable;
-import java.util.LinkedList;
+import java.util.*;
 
 public class LinkedList1 {
 
